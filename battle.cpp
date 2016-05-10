@@ -43,14 +43,14 @@ if (luchdef == "Atacar")
         cout << "Le asestaste un golpe critico contra el enemigo por " << DealCrit << " puntos de dano! \n";
         goto Batalla;
     }
-    else if (CritHit < NumAl < DamHit)
-    {
-        cout << "Le asestaste " << DealDam << " puntos de dano contra el enemigo. \n";
-        goto Batalla;
-    }
     else if (NumAl > DamHit)
     {
         cout << "Tu fallaste.\n";
+        goto Batalla;
+    }
+    else if (CritHit < NumAl < DamHit)
+    {
+        cout << "Le asestaste " << DealDam << " puntos de dano contra el enemigo. \n";
         goto Batalla;
     }
     else
@@ -70,14 +70,14 @@ else if (luchdef == "Esperar")
         cout << "Recibiste un golpe critico del enemigo por " << EneCrit << " puntos de dano! \n";
         goto Batalla;
     }
-    else if (EneCritHit < NumAl < EneDamHit)
-    {
-        cout << "Recibiste " << EneDam << " puntos de dano del enemigo. \n";
-        goto Batalla;
-    }
     else if (NumAl > EneDamHit)
     {
         cout << "El golpe del enemigo fallo.\n";
+        goto Batalla;
+    }
+    else if (EneCritHit < NumAl < EneDamHit)
+    {
+        cout << "Recibiste " << EneDam << " puntos de dano del enemigo. \n";
         goto Batalla;
     }
     else
